@@ -1,5 +1,5 @@
 const express = require('express')
-const mongoose = require('mongoose')
+//const mongoose = require('mongoose')
 const cors = require('cors')
 const dotenv = require('dotenv').config()
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
@@ -26,8 +26,8 @@ app.post('/checkout', async (req, res) => {
 })
 
 // connecting to db
-mongoose.connect(process.env.MONGO_URL)
-    .then(() => console.log('db success'))
+//mongoose.connect(process.env.MONGO_URL)
+//    .then(() => console.log('db success'))
 
 
 // starting server

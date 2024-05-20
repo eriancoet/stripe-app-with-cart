@@ -7,8 +7,8 @@ import { useCartContext } from '../../ctx/cartContext'
 
 const Cart = () => {
     const { products, toggleCart, isOpen, removeProduct } = useCartContext()
-
-    const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY)
+    const REACT_APP_STRIPE_PUBLISHABLE_KEY = "pk_test_51NXJLlLssyCrcg8U9d9PGvF8pc4i774tkt0EHjHlzC2hVD2zyKXnonyP1DPREfDpta8ENwzEOkaFxD82mUDJFuGq00f1BaWvVv"
+    const stripePromise = loadStripe(REACT_APP_STRIPE_PUBLISHABLE_KEY)
 
 
     const handleCheckout = async () => {
